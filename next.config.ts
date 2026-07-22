@@ -9,7 +9,8 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "frame-ancestors 'self' https://weayabo.github.io",
+            value:
+              "frame-ancestors 'self' https://weayabo.github.io http://localhost:5173",
           },
         ],
       },
