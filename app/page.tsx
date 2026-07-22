@@ -6,7 +6,11 @@ type Message = { role: "user" | "assistant"; content: string };
 
 export default function Home() {
   const [messages, setMessages] = useState<Message[]>([
-    { role: "assistant", content: "Hey, kumusta! 👋 Ask me anything about my work, projects, or tech stack." },
+    {
+      role: "assistant",
+      content:
+        "Hey, kumusta! 👋 Ask me anything about my work, projects, or tech stack.",
+    },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -18,7 +22,10 @@ export default function Home() {
 
   async function handleSend() {
     if (!input.trim()) return;
-    const newMessages: Message[] = [...messages, { role: "user", content: input }];
+    const newMessages: Message[] = [
+      ...messages,
+      { role: "user", content: input },
+    ];
     setMessages(newMessages);
     setInput("");
     setLoading(true);
@@ -29,10 +36,30 @@ export default function Home() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: newMessages }),
       });
+
       const data = await res.json();
-      setMessages([...newMessages, { role: "assistant", content: data.answer }]);
+
+      if (!res.ok || !data.answer) {
+        setMessages([
+          ...newMessages,
+          {
+            role: "assistant",
+            content:
+              "Ay sorry, nag-hit ako ng daily limit (poor things 😅). Try again later or check out my GitHub in the meantime!",
+          },
+        ]);
+        return;
+      }
+
+      setMessages([
+        ...newMessages,
+        { role: "assistant", content: data.answer },
+      ]);
     } catch (err) {
-      setMessages([...newMessages, { role: "assistant", content: "Oops, may error. Try again?" }]);
+      setMessages([
+        ...newMessages,
+        { role: "assistant", content: "Oops, may error. Try again in a bit?" },
+      ]);
     } finally {
       setLoading(false);
     }
@@ -49,7 +76,14 @@ export default function Home() {
         padding: "24px 16px",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 10,
+          marginBottom: 16,
+        }}
+      >
         <div
           style={{
             width: 36,
@@ -68,7 +102,9 @@ export default function Home() {
         </div>
         <div>
           <h2 style={{ margin: 0, fontSize: 18 }}>Chat with Remus</h2>
-          <span style={{ fontSize: 12, color: "var(--muted-foreground)" }}>Ask about my projects, skills, or background</span>
+          <span style={{ fontSize: 12, color: "var(--muted-foreground)" }}>
+            Ask about my projects, skills, or background
+          </span>
         </div>
       </div>
 
@@ -84,14 +120,24 @@ export default function Home() {
         }}
       >
         {messages.map((m, i) => (
-          <div key={i} style={{ marginBottom: 12, textAlign: m.role === "user" ? "right" : "left" }}>
+          <div
+            key={i}
+            style={{
+              marginBottom: 12,
+              textAlign: m.role === "user" ? "right" : "left",
+            }}
+          >
             <div
               style={{
                 display: "inline-block",
                 padding: "10px 14px",
                 borderRadius: "var(--radius)",
-                background: m.role === "user" ? "var(--accent)" : "var(--secondary)",
-                color: m.role === "user" ? "var(--accent-foreground)" : "var(--secondary-foreground)",
+                background:
+                  m.role === "user" ? "var(--accent)" : "var(--secondary)",
+                color:
+                  m.role === "user"
+                    ? "var(--accent-foreground)"
+                    : "var(--secondary-foreground)",
                 maxWidth: "80%",
                 textAlign: "left",
                 fontSize: 14,
@@ -102,7 +148,15 @@ export default function Home() {
                 components={{
                   p: ({ children }) => <p style={{ margin: 0 }}>{children}</p>,
                   a: ({ href, children }) => (
-                    <a href={href} target="_blank" rel="noopener noreferrer" style={{ color: "var(--blue-tint)", textDecoration: "underline" }}>
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: "var(--blue-tint)",
+                        textDecoration: "underline",
+                      }}
+                    >
                       {children}
                     </a>
                   ),
@@ -113,7 +167,11 @@ export default function Home() {
             </div>
           </div>
         ))}
-        {loading && <div style={{ color: "var(--muted-foreground)", fontSize: 13 }}>Remus is typing...</div>}
+        {loading && (
+          <div style={{ color: "var(--muted-foreground)", fontSize: 13 }}>
+            Remus is typing...
+          </div>
+        )}
         <div ref={bottomRef} />
       </div>
 
