@@ -1,0 +1,57 @@
+An Organized, Independent, and Self-Centered Computer Science student who can perform well
+under pressure. Interested in web development, software testing, and building responsive
+applications. I aim to perform at my highest level in every assignment, thrive in team settings, and
+possess a demonstrated capacity to learn and adjust rapidly.
+REMUS Z KINILITAN
+SUMMARY
+WORK EXPERIENCE
+Redesigned the SP Dashboard with a two-state model (onboarding vs. active), reducing
+cognitive load and improving time to first value for new service partners
+Developed a full AI strategy identifying trust and communication drop-off as core product
+problems, translated into wireframe specs and an executive presentation
+Designed an AI-powered KYC flow with a three-outcome threshold model, skill validation,
+mutual trust scoring, and inquiry scaffolding to structure pre-chat conversations
+Collaborated with stakeholders to deliver design artifacts in Figma, Word, and PowerPoint,
+grounding every decision in real user drop-off data
+UI/UX Designer Intern - Kilala Philippines May 2026 - June 2026
+Calulut, San Fernando, Pampanga • +63 969 142 4872 • remuszamora@gmail.com
+https://weayabo.github.io/
+WEB DEVELOPER
+Built and deployed a portfolio website via GitHub Pages and containerized TinaCMS with
+Docker (Next.js/Vue)
+Integrated MongoDB and KeyCloak as database and auth adapters in a Next.js project
+Refactored API/CRUD operations and implemented Redis caching for a criminology assessment
+system
+Performed QA testing on a mobile app and collaborated in an Agile team following coding best
+practices
+Full Stack Developer Intern - Dakilasoft IT Solutions February 2026 - April 2026
+EDUCATION
+Associate in Computer Technology Bacolor, Pampanga
+Bachelor of Science In Computer Science
+June 2024- June 2026
+Pampanga State University
+Bacolor, Pampanga
+Dean’s List Academic Achievement Award June 2022 - June 2024
+Dean’s List Academic Achievement Award
+Built a Library Attendance System using Java (Apache NetBeans) and MySQL, automating
+student entry tracking via barcode scanning and eliminating manual logging
+Conducted user training and created a user manual for library staff, ensuring smooth system
+handover and day-to-day adoption
+Collaborated with library staff to gather requirements and align the system with operational
+needs
+IT Intern - PSU Library April 2024 - May 2024
+Library Attendance System | On Job Training Project - PSU Library
+App Description : A software application that scan barcode based on student number when
+entering the premises of PSU library.
+Tech Stack: Java build in Apache Netbeans and using MySQL for database.
+SKILLS
+Languages: HTML/CSS (Intermediate), Python, PHP, Java (Basic)
+Frameworks: Angular, Vue, Next.js, React, Django/DRF (Basic)
+Tools & Platforms: Git, MySQL, Figma
+Other: API Integration, CI/CD Integration
+PROJECTS
+CareerLens | Thesis Project - PSU
+App Description : A web application that recommend career base on family occupation and
+academic background, it also showcase job market trends.
+Tech Stack: Angular 19 for the frontend and Node.js with Express on the backend, MySQL
+for database and deployed on Google Cloud Run with CI/CD.
