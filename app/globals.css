@@ -1,26 +1,46 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --black:         #0d0d0d;
+  --near-black:    #141414;
+  --dark-surface:  #1c1c1c;
+  --mid-gray:      #888888;
+  --light-gray:    #d4d4d4;
+  --off-white:     #f5f5f5;
+  --pure-white:    #ffffff;
+
+  --blue-accent:   #4a90d9;
+  --blue-tint:     #eaf3fb;
+  --blue-muted:    rgba(74, 144, 217, 0.15);
+
+  --radius: 0.75rem;
+
+  --background:            var(--black);
+  --foreground:            var(--off-white);
+  --card:                  var(--near-black);
+  --card-foreground:       var(--off-white);
+  --secondary:             var(--dark-surface);
+  --secondary-foreground:  var(--light-gray);
+  --muted:                 rgba(255, 255, 255, 0.07);
+  --muted-foreground:      rgba(245, 245, 245, 0.45);
+  --accent:                var(--blue-accent);
+  --accent-foreground:     var(--pure-white);
+  --border:                rgba(255, 255, 255, 0.09);
+  --input:                 rgba(255, 255, 255, 0.05);
+  --ring:                  var(--blue-accent);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+}
+
+h1, h2, h3 {
+   font-family: "Space Grotesk", "Poppins", sans-serif;
 }
