@@ -1,0 +1,92 @@
+{
+  "name": "Remus Z Kinilitan",
+  "title": "Full Stack Web Developer | AI Integration",
+  "location": "San Fernando, Pampanga, Philippines",
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "Pampanga State University",
+      "duration": "June 2024 - June 2026",
+      "honors": ["Dean's List Academic Achievement Award"]
+    },
+    {
+      "degree": "Associate in Computer Technology",
+      "school": "Pampanga State University",
+      "duration": "June 2022 - June 2024",
+      "honors": ["Dean's List Academic Achievement Award"]
+    }
+  ],
+  "experience": [
+    {
+      "role": "UI/UX Designer Intern",
+      "company": "Kilala Philippines",
+      "duration": "May 2026 - June 2026",
+      "skills": ["Figma", "UX strategy", "Dashboard design", "KYC flow design", "Stakeholder presentations", "Wireframing"],
+      "highlights": [
+        "Redesigned SP Dashboard with a two-state model, reducing cognitive load",
+        "Designed an AI-powered KYC flow with threshold model and trust scoring",
+        "Delivered design artifacts and executive presentations grounded in user data"
+      ]
+    },
+    {
+      "role": "Full Stack Developer Intern",
+      "company": "Dakilasoft IT Solutions",
+      "duration": "February 2026 - April 2026",
+      "skills": ["Next.js", "Vue", "Docker", "MongoDB", "KeyCloak", "Redis", "API/CRUD", "QA testing", "Agile", "Git"],
+      "highlights": [
+        "Built and deployed portfolio site via GitHub Pages, containerized TinaCMS with Docker",
+        "Integrated MongoDB and KeyCloak as database and auth adapters in a Next.js project",
+        "Refactored API/CRUD operations and implemented Redis caching for a criminology assessment system",
+        "Performed QA testing on a mobile app within an Agile team"
+      ]
+    },
+    {
+      "role": "IT Intern",
+      "company": "PSU Library",
+      "duration": "April 2024 - May 2024",
+      "skills": ["Java", "Apache NetBeans", "MySQL", "Requirements gathering", "Documentation", "User training"],
+      "highlights": [
+        "Built a Library Attendance System automating student entry tracking via barcode scanning",
+        "Conducted user training and created user manuals for library staff"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "CareerLens",
+      "type": "Thesis Project",
+      "description": "Web app recommending careers based on family occupation and academic background, showcasing job market trends",
+      "tech_stack": ["Angular 19", "Node.js", "Express", "MySQL", "Google Cloud Run", "CI/CD"]
+    },
+    {
+      "name": "Library Attendance System",
+      "type": "OJT Project",
+      "description": "Barcode-based student entry tracking system",
+      "tech_stack": ["Java", "Apache NetBeans", "MySQL"]
+    },
+    {
+      "name": "Job Fit Analyzer",
+      "type": "AI Personal Project",
+      "description": "Web app analyzing resume-job description fit, returning match score, skill gaps, and PH-filtered job search links",
+      "tech_stack": ["Next.js", "Vercel AI SDK", "@ai-sdk/google", "Gemini API", "Zod", "Vercel"]
+    },
+    {
+      "name": "chat-with-remus",
+      "type": "AI Personal Project",
+      "description": "RAG-powered chatbot answering questions about background in first-person, embedded into portfolio",
+      "tech_stack": ["Next.js", "LangChain.js", "Pinecone", "Gemini embeddings", "Vercel"]
+    }
+  ],
+  "skills": {
+    "languages": ["HTML", "CSS", "JavaScript", "TypeScript", "Python", "PHP", "Java"],
+    "frameworks": ["Angular", "Vue", "Next.js", "React", "Node.js", "Express", "Django/DRF (Basic)"],
+    "databases": ["MySQL", "MongoDB"],
+    "tools_platforms": ["Git", "Docker", "Google Cloud Platform", "Google Cloud Run", "Vercel", "Figma"],
+    "ai_llm": ["Gemini API", "LangChain.js", "RAG", "Pinecone", "Prompt Engineering", "Vercel AI SDK", "Zod / structured output"],
+    "other": ["API Integration", "REST APIs", "CI/CD", "Redis caching", "Auth (KeyCloak)", "Agile", "QA Testing"]
+  },
+  "availability": {
+    "status": "Fresh graduate (BSCS, August 2026), open to full-time roles",
+    "location_flexibility": "Based in San Fernando, Pampanga - can commute to Pampanga/Angeles area; open to remote or discussing relocation"
+  }
+}
