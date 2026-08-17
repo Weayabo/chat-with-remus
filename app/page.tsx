@@ -9,7 +9,7 @@ export default function Home() {
     {
       role: "assistant",
       content:
-        "Hey, kumusta! 👋 Ask me anything about my work, projects, or tech stack.",
+        "Hello, I'm Remus. Ask me anything about my work, projects, or tech stack.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -40,12 +40,18 @@ export default function Home() {
       const data = await res.json();
 
       if (!res.ok || !data.answer) {
+        // Distinguish rate-limit responses (429) from other failures so the
+        // message shown actually reflects what happened.
+        const fallback =
+          res.status === 429
+            ? "I've reached my current request limit. Please try again shortly, or reach out via GitHub or LinkedIn in the meantime."
+            : "Something went wrong processing that request. Please try again in a moment.";
+
         setMessages([
           ...newMessages,
           {
             role: "assistant",
-            content:
-              "Ay sorry, nag-hit ako ng daily limit (poor things 😅). Try again later or check out my GitHub in the meantime!",
+            content: fallback,
           },
         ]);
         return;
@@ -58,7 +64,10 @@ export default function Home() {
     } catch (err) {
       setMessages([
         ...newMessages,
-        { role: "assistant", content: "Oops, may error. Try again in a bit?" },
+        {
+          role: "assistant",
+          content: "Something went wrong on my end. Please try again in a moment.",
+        },
       ]);
     } finally {
       setLoading(false);
