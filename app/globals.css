@@ -1,54 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 :root {
   /* =========================================================
      PORTFOLIO COLOR SYSTEM
      ========================================================= */
 
-  --black:          #0d0d0d;
-  --near-black:     #111311;
-  --dark-surface:   #171a17;
-  --surface:        #1c201c;
+  --black: #0d0d0d;
+  --near-black: #111311;
+  --dark-surface: #171a17;
+  --surface: #1c201c;
 
-  --mid-gray:       #858985;
-  --light-gray:     #c9ccc9;
-  --off-white:      #f2f3f1;
-  --pure-white:     #ffffff;
+  --mid-gray: #858985;
+  --light-gray: #c9ccc9;
+  --off-white: #f2f3f1;
+  --pure-white: #ffffff;
 
   /* Green accent */
-  --green-accent:   #4f8a5f;
-  --green-bright:   #6fbf7a;
-  --green-soft:     #8fc995;
+  --green-accent: #4f8a5f;
+  --green-bright: #6fbf7a;
+  --green-soft: #8fc995;
 
-  --green-muted:    rgba(79, 138, 95, 0.15);
-  --green-subtle:   rgba(79, 138, 95, 0.08);
-  --green-glow:     rgba(111, 191, 122, 0.25);
+  --green-muted: rgba(79, 138, 95, 0.15);
+  --green-subtle: rgba(79, 138, 95, 0.08);
+  --green-glow: rgba(111, 191, 122, 0.25);
 
   /* =========================================================
      SEMANTIC COLORS
      ========================================================= */
 
-  --background:           var(--black);
-  --foreground:           var(--off-white);
+  --background: var(--black);
+  --foreground: var(--off-white);
 
-  --card:                  var(--near-black);
-  --card-foreground:       var(--off-white);
+  --card: var(--near-black);
+  --card-foreground: var(--off-white);
 
-  --secondary:             var(--dark-surface);
-  --secondary-foreground:  var(--light-gray);
+  --secondary: var(--dark-surface);
+  --secondary-foreground: var(--light-gray);
 
-  --muted:                 rgba(255, 255, 255, 0.06);
-  --muted-foreground:      rgba(242, 243, 241, 0.45);
+  --muted: rgba(255, 255, 255, 0.06);
+  --muted-foreground: rgba(242, 243, 241, 0.45);
 
-  --accent:                var(--green-accent);
-  --accent-foreground:     var(--pure-white);
+  --accent: var(--green-accent);
+  --accent-foreground: var(--pure-white);
 
-  --border:                rgba(255, 255, 255, 0.09);
-  --border-subtle:         rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.09);
+  --border-subtle: rgba(255, 255, 255, 0.05);
 
-  --input:                 rgba(255, 255, 255, 0.045);
+  --input: rgba(255, 255, 255, 0.045);
 
-  --ring:                  var(--green-accent);
+  --ring: var(--green-accent);
 
   /* =========================================================
      RADIUS
@@ -97,19 +97,13 @@ body {
 h1,
 h2,
 h3 {
-  font-family:
-    "Space Grotesk",
-    "Poppins",
-    sans-serif;
+  font-family: "Space Grotesk", "Poppins", sans-serif;
 }
 
 .display,
 .brand,
 .hero-title {
-  font-family:
-    "Cinzel",
-    Georgia,
-    serif;
+  font-family: "Cinzel", Georgia, serif;
 }
 
 /* =========================================================
@@ -175,12 +169,11 @@ h3 {
   position: absolute;
   inset: 0;
 
-  background:
-    radial-gradient(
-      circle at 50% 20%,
-      rgba(91, 140, 90, 0.07),
-      transparent 40%
-    );
+  background: radial-gradient(
+    circle at 50% 20%,
+    rgba(91, 140, 90, 0.07),
+    transparent 40%
+  );
 }
 
 .chat-mountains {
@@ -624,6 +617,14 @@ h3 {
 
 .input-hint span:first-child {
   color: var(--foreground);
+}
+
+.message-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px rgba(91, 140, 90, 0.6);
 }
 
 /* ---------------------------------------------------------
